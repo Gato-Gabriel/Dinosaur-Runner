@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #666666;
+}
+body {
+    
+    background: #fafafa;
+}
+#background {
+    position: absolute;
+    bottom: 0;
+    background-image: url('imgs/background.png');
+    background-repeat: repeat-x;
+    animation: slideRight 2800s infinite linear;
+    width: 100%;
+    height: 200px;
+}
+#dino {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 3px;
+    margin-left: 62px;
+
+    background-image: url('imgs/dino.png');
+}
+.scoreboard {
+    position: absolute;
+    right: 42px;
+    top: 24px;
+
+    font-size: 26px;
+    font-weight: bold;
+}
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background: url('imgs/cactus.png');
+}
+.game-over-screen {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 160px;
+
+    animation: gameOverSlideDown 1s 1 ease-out;
+    animation-iteration-count: 1;
+}
+.game-over-box {
+    background-image: linear-gradient(to bottom right, blanchedalmond , rgb(194, 57, 194));
+    padding: 24px 0px;
+    border: #666666 1px solid;
+    border-radius: 15%;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+}
+.game-over-score {
+    margin-top: 8px;
+    
+    font-size: 22px;
+    color: beige;
+}
+.play-again {
+    cursor: pointer;
+
+    margin-top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+@keyframes slideRight {  /* Função que faz com que o fundo se mova(para a direita) */
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+@keyframes gameOverSlideDown {
+    from {
+        margin-top: -160px;
+    }
+    to {
+        margin-top: 160px;
+    }
+}
